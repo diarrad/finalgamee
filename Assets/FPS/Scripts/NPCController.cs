@@ -28,13 +28,13 @@ public class NPCController : MonoBehaviour
         transform.LookAt(Target.transform);
         //Make a temp velocity variable to calculate how I should move
         //By default, I keep my old momentum
-        Vector3 vel = RB.velocity;
+        Vector3 vel = RB.linearVelocity;
         //Walk forwards, but don't do it perfectly. Lerp towards my desired speed
         //This makes it so that if I take a knockback it takes a second for me to recover
         vel = Vector3.Lerp(vel,transform.forward * Speed,10*Time.deltaTime);
         //Use my old Y velocity, though. I shouldn't be able to fly
-        vel.y = RB.velocity.y;
+        vel.y = RB.linearVelocity.y;
         //Plug it into my rigidbody
-        RB.velocity = vel;
+        RB.linearVelocity = vel;
     }
 }

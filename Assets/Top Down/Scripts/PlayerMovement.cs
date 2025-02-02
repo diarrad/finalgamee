@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
             vel.y = Speed;
         else if (Input.GetKey(KeyCode.S))
             vel.y = -Speed;
-        RB.velocity = vel;
+        RB.linearVelocity = vel;
         
         //If I click, shoot!
         if (Input.GetMouseButtonDown(0))

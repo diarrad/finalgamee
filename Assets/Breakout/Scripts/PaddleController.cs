@@ -36,6 +36,6 @@ public class PaddleController : MonoBehaviour
     {
         //Currently, the ball keeps its old X velocity
         //This is an intentionally bad answer--can you fix it?
-        return ball.RB.velocity.x;
+        return ball.RB.linearVelocity.x;
     }
 }

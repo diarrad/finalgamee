@@ -17,7 +17,7 @@ public class BallController : MonoBehaviour
         //I record where I started, so I can respawn there
         StartPos = transform.position;
         //I check my StartVelocity variable and set that to be my velocity
-        RB.velocity = StartVel;
+        RB.linearVelocity = StartVel;
     }
 
     void Update()
@@ -26,14 +26,14 @@ public class BallController : MonoBehaviour
         if (transform.position.y < -10)
         {
             transform.position = StartPos;
-            RB.velocity = StartVel;
+            RB.linearVelocity = StartVel;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         //If I hit something, I'm going to bounce. Let's calculate my new velocity
-        Vector2 vel = RB.velocity;
+        Vector2 vel = RB.linearVelocity;
         
         //Did I hit the paddle?
         PaddleController pc = other.gameObject.GetComponent<PaddleController>();
@@ -70,6 +70,6 @@ public class BallController : MonoBehaviour
         }
 
         //Now that I've calculated any bouncing I need to do, plug that into my rigidbody
-        RB.velocity = vel;
+        RB.linearVelocity = vel;
     }
 }

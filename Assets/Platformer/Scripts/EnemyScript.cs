@@ -29,7 +29,7 @@ public class EnemyScript : MonoBehaviour
     {
         //I'll use this variable to track the movement I want
         //By default, I move like I moved last frame
-        Vector2 vel = RB.velocity;
+        Vector2 vel = RB.linearVelocity;
 
         //If I'm facing right, move right. . .
         if (!FacingLeft)
@@ -42,7 +42,7 @@ public class EnemyScript : MonoBehaviour
         }
 
         //Here I actually feed the Rigidbody the movement I want
-        RB.velocity = vel;
+        RB.linearVelocity = vel;
 
         //If I fall off the bottom of the screen, self destruct
         if (transform.position.y < -10)

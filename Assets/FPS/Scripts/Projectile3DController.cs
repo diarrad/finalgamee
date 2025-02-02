@@ -16,7 +16,7 @@ public class Projectile3DController : MonoBehaviour
     void Start()
     {
         //When I spawn, I fly straight forwards at my Speed
-        RB.velocity = transform.forward * Speed;
+        RB.linearVelocity = transform.forward * Speed;
     }
 
     private void OnCollisionEnter(Collision other)
@@ -26,7 +26,7 @@ public class Projectile3DController : MonoBehaviour
         if (rb != null)
         {
             //I push them in the direction I'm flying with a power equal to my Knockback stat
-            rb.AddForce(RB.velocity.normalized * Knockback,ForceMode.Impulse);
+            rb.AddForce(RB.linearVelocity.normalized * Knockback,ForceMode.Impulse);
         }
         //If I hit anything, I despawn
         Destroy(gameObject);

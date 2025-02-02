@@ -55,7 +55,7 @@ public class PlayerScript : MonoBehaviour
         
         //I'll use this variable to track the movement I want
         //By default, I move like I moved last frame
-        Vector2 vel = RB.velocity;
+        Vector2 vel = RB.linearVelocity;
 
         if (Input.GetKey(KeyCode.RightArrow))
         { 
@@ -87,7 +87,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         //Here I actually feed the Rigidbody the movement I want
-        RB.velocity = vel;
+        RB.linearVelocity = vel;
         //Use my FacingLeft variable to make my sprite face the right way
         SR.flipX = FacingLeft;
 

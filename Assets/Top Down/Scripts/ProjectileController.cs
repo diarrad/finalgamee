@@ -14,7 +14,7 @@ public class ProjectileController : MonoBehaviour
     {
         //Just go flying in the direction I'm facing!
         //It's up to the gun to rotate me so that I'm facing the correct direction
-        RB.velocity = transform.right * Speed;
+        RB.linearVelocity = transform.right * Speed;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

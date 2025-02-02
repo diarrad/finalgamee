@@ -61,10 +61,10 @@ public class FirstPersonController : MonoBehaviour
             if (JumpPower > 0 && Input.GetKeyDown(KeyCode.Space) && OnGround())
                 move.y = JumpPower;
             else  //Otherwise, my Y velocity is whatever it was last frame
-                move.y = RB.velocity.y;
+                move.y = RB.linearVelocity.y;
             
             //Plug my calculated velocity into the rigidbody
-            RB.velocity = move;
+            RB.linearVelocity = move;
         }
 
         //If I click. . .
