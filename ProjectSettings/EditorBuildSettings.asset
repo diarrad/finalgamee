@@ -17,4 +17,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Generic Assets/You Lose.unity
     guid: 44c9c043ab0c1d045b5f53f6f89f610a
+  - enabled: 1
+    path: Assets/2D Costume Character/dressup.unity
+    guid: 9de20da8f81cd4a09871d61673d1e30c
+  - enabled: 1
+    path: Assets/2D Costume Character/FinishedLook.unity
+    guid: 13072b6845abf47afa9b5bbf88f9fafc
+  - enabled: 1
+    path: Assets/2D Costume Character/girl/dressyyy.unity
+    guid: ccc6a0109d90f4ca583c4db53d41bbd2
+  - enabled: 1
+    path: Assets/2D Costume Character/girl/ResultScene.unity
+    guid: 95b52ba21efb84fb4aadae9d4d4feebe
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
