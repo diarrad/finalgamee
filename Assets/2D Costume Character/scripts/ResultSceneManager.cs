@@ -8,6 +8,7 @@ using UnityEngine.Windows.Speech;
 public class ResultSceneManager : MonoBehaviour
 {
     public TextMeshProUGUI resultText;
+   
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,13 +36,13 @@ public class ResultSceneManager : MonoBehaviour
             case 1:
                 return "  Umm, maybe next time?";
             default:
-                return " Ooohhh, let's try that again ";
+                return " Ooohhh, how about we try that again ?";
         }
     }
-
+    
     public void RestartGame()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("dressyy");
     }
 
     // Update is called once per frame

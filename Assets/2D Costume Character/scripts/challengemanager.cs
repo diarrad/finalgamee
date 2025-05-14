@@ -12,9 +12,10 @@ public class challengemanager : MonoBehaviour
     
     public dressupmanager dressUpManager;
     public uimanager uiManager;
+    public AudioClip finishSound;
+    public AudioSource sfxSource2;
+   
     
-    
-
     public void GenerateTheme()
     {
         int index = Random.Range(0, fashionThemes.Length); // pick a random theme
@@ -25,14 +26,20 @@ public class challengemanager : MonoBehaviour
 
     public void OnFinishClicked()
     {
+        
         if(!gameEnded)
         {
             EndGame(false);
+        }
+        if (finishSound != null && sfxSource2 != null)
+        {
+            sfxSource2.PlayOneShot(finishSound);
         }
         PlayerPrefs.SetInt("TopIndex", dressUpManager.topIndex);
         PlayerPrefs.SetInt("BottomIndex", dressUpManager.bottomIndex);
         PlayerPrefs.SetInt("HairIndex", dressUpManager.hairIndex);
         PlayerPrefs.SetInt("ShoesIndex", dressUpManager.shoesIndex);
+        
     }
 
     void EndGame(bool timedOut)

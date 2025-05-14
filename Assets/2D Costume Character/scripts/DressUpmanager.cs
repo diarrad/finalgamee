@@ -29,12 +29,14 @@ public class dressupmanager : MonoBehaviour
     {
         bottomIndex = (bottomIndex + 1) % bottomOptions.Length;
         bottomRenderer.sprite = bottomOptions[bottomIndex].sprite;
+        sfxSource.PlayOneShot(changeSound);
     }
 
     public void NextShoes()
     {
         shoesIndex = (shoesIndex + 1) % shoesOptions.Length;
         shoesRenderer.sprite = shoesOptions[shoesIndex].sprite;
+        sfxSource.PlayOneShot(changeSound);
     }
     public ClothingOption GetHair() => hairOptions[hairIndex];
 
